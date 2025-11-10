@@ -16,7 +16,7 @@ void insertAtPosition(Node* &head, int value, int pos){
     }
     
     Node* temp=head;
-    for(int i=1; i<pos-1 && temp!=head; i++){
+    for(int i=1; i<pos-1 && temp != NULL; i++){
         temp=temp->next;
     }
     
