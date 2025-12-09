@@ -1,3 +1,4 @@
+//code can be used for insertion at beginning
 #include<iostream>
 using namespace std;
 struct Node{
