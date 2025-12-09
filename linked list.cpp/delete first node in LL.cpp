@@ -12,6 +12,10 @@ void insert(int n){
     head = newNode;
 }
 void deleteFirstNode(){
+    if(head==NULL){
+        cout<<"List is empty, nothing to delete";
+    }
+    return;
     Node* temp = head;
     head = head-> next;
     delete temp;
