@@ -16,22 +16,6 @@ void insert(int n){
     }
     head=newNode;
 }
-void deleteAtEnd(){
-    if(head==NULL){
-        cout<<"List is empty!"<<endl;
-        return;
-    }
-    Node* temp =head;
-    while(temp->next != NULL){
-        temp = temp->next;
-    }
-    if(temp->prev != NULL){
-        temp->prev->next=NULL;
-    }else{
-        head=NULL;
-    }
-    delete temp;
-}
 void deleteAtPos(int pos){
     if(head==NULL){
         cout<<"List is empty, nothing to delete!"<<endl;
@@ -43,7 +27,7 @@ void deleteAtPos(int pos){
         if(head!=NULL){
             head->prev=NULL;
         }
-        delete head;
+        delete temp;
         return;
     }
     for(int i=1; i<pos && temp!=NULL; i++){
