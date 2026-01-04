@@ -1,3 +1,4 @@
+//searching in a linked list or double linked list!!!
 #include<iostream>
 using namespace std;
 struct Node{
