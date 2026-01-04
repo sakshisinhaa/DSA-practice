@@ -22,6 +22,25 @@ void insertAtBeginning(int n){
         head=newNode;
     }
 }
+void deleteAtBeginning(){
+    if(head==NULL){
+        cout<<"List is empty, Nothing to delete!"<<endl;
+        return;
+    }
+    if(head->next==head){
+        delete head;
+        head=NULL;
+        return;
+    }
+    Node* temp = head;
+    Node* last = head;
+    while(last->next!=head){
+        last=last->next;
+    }
+    head=head->next;
+    last->next=head;
+    delete temp;
+}
 void print(){
     if(head==NULL){
         cout<<"List is empty!"<<endl;
@@ -39,5 +58,6 @@ int main(){
     insertAtBeginning(3);
     insertAtBeginning(2);
     insertAtBeginning(1);
+    deleteAtBeginning();
     print();
 }
